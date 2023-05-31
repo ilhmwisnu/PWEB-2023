@@ -22,9 +22,8 @@ class TodoController extends Controller
 
     public function show($id,$title)
     {
-        // return view("detail_todo", [
-        //     "todo" => Todo::find($id)
-        // ]);
-        return $title;
+        return view("detail_todo", [
+            "todo" => Todo::find($id)
+        ]);
     }
 }
