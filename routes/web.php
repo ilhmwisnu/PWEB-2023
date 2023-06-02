@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TodoController::class, "index"]);
 Route::get("/todo/{id}/{title}", [TodoController::class, "show"]);
-
 Route::get('/about', [TodoController::class, "about"]);
+
+Route::get('/todo/tambah', [TodoController::class,'create']);
+Route::post("/",[TodoController::class,"store"]);
+Route::delete("/todo/{id}",[TodoController::class, "destroy"]);
 
 
 
